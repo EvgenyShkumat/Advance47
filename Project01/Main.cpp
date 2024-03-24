@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+string convert_result_tostring(int** matrix, string* names, int size);
+
 int main() {
 	int size;
 
@@ -27,7 +29,9 @@ int main() {
 		cout << "Enter amount of bronze medals of " << *(names + i) << ": ";
 		cin >> *(*(medals + i) + 2);
 	}
+	system("cls");
 
+	cout << convert_result_tostring(medals, names, size);
 
 	return 0;
 }
